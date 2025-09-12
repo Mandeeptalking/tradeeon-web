@@ -154,12 +154,6 @@ const BotBasicsStep: React.FC<BotBasicsStepProps> = ({ data, onChange }) => {
                   <span className="ml-2 text-blue-900">{data.exchange} ({data.region})</span>
                 </div>
               )}
-              <div>
-                <span className="text-blue-700 font-medium">Symbols:</span>
-                <span className="ml-2 text-blue-900">
-                  {data.symbols.length > 0 ? `${data.symbols.length} selected` : 'None selected'}
-                </span>
-              </div>
             </div>
           </div>
         </div>

@@ -287,10 +287,6 @@ const NewBotPage = () => {
       errors.push('Bot name is required');
     }
     
-    if (form.market === 'Crypto' && !form.exchangeId) {
-      errors.push('Exchange connection is required for crypto trading');
-    }
-    
     if (form.symbols.length === 0) {
       errors.push('At least one symbol is required');
     }

@@ -245,9 +245,6 @@ const CreateBotWizard = () => {
         if (!data.basics.name.trim()) {
           errors.push('Bot name is required');
         }
-        if (data.basics.market === 'Crypto' && !data.basics.exchangeId) {
-          errors.push('Exchange connection is required for crypto trading');
-        }
         if (data.basics.symbols.length === 0) {
           errors.push('At least one symbol is required');
         }
