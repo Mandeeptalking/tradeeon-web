@@ -1,0 +1,80 @@
+/* Lightweight Charts overrides */
+.tv-lightweight-charts {
+  font-family: inherit !important;
+}
+
+.tv-lightweight-charts canvas {
+  border-radius: 0.5rem;
+}
+
+/* Chart container styling */
+.chart-container {
+  position: relative;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Overlay panel animations */
+.overlay-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.overlay-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.overlay-exit {
+  opacity: 1;
+}
+
+.overlay-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Sentence builder animations */
+.sentence-chip {
+  transition: all 0.2s ease;
+}
+
+.sentence-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart loading overlay */
+.chart-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-pane {
+    height: 300px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .tv-lightweight-charts {
+    background: #1f2937;
+  }
+}
